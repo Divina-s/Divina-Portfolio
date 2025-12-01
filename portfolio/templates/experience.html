@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% block title %}Experience{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-5 text-center fw-bold" style="color:#1d3557;">Professional Experience</h2>
+
+  <div class="timeline position-relative">
+    {% for exp in experiences %}
+    <div class="timeline-item d-flex mb-5 position-relative">
+      <!-- Timeline marker -->
+      <div class="timeline-marker me-4 d-flex flex-column align-items-center">
+        <div class="marker bg-primary shadow-sm"></div>
+        {% if not forloop.last %}
+        <div class="timeline-line flex-grow-1 bg-primary"></div>
+        {% endif %}
+      </div>
+
+      <!-- Experience card -->
+      <div class="card shadow-sm flex-grow-1">
+        <div class="card-body">
+          <h5 class="card-title">{{ exp.title }} <small class="text-muted">at {{ exp.role }}</small></h5>
+          <p class="text-muted mb-2">
+            <i class="fa fa-map-marker-alt me-1"></i> {{ exp.location }} |
+            <i class="fa fa-calendar-alt me-1"></i> {{ exp.date|date:"F Y" }}
+          </p>
+          <p class="card-text text-muted">
+            {{ exp.description }}
+            {% if exp.description|length < 200 %}
+            <span class="text-muted">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec vel ligula id nulla pretium commodo.</span>
+            {% endif %}
+          </p>
+        </div>
+      </div>
+    </div>
+    {% endfor %}
+  </div>
+</div>
+
+<style>
+/* Timeline wrapper */
+.timeline {
+  position: relative;
+  margin: 0 auto;
+  padding-left: 40px;
+}
+
+/* Timeline marker */
+.timeline-marker {
+  position: relative;
+  width: 20px;
+  flex-shrink: 0;
+}
+
+.marker {
+  width: 15px;
+  height: 15px;
+  border-radius: 50%;
+  background-color: #1d3557;
+  border: 3px solid #fff;
+  transition: transform 0.3s;
+}
+
+.marker:hover {
+  transform: scale(1.2);
+}
+
+.timeline-line {
+  width: 3px;
+  flex-grow: 1;
+  margin-top: 5px;
+}
+
+/* Card styling */
+.card {
+  border: none;
+  border-radius: 10px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .timeline {
+    padding-left: 20px;
+  }
+  .timeline-item {
+    flex-direction: column;
+  }
+  .timeline-marker {
+    flex-direction: row;
+    margin-bottom: 10px;
+  }
+}
+</style>
+{% endblock %}

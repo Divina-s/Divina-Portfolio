@@ -1,0 +1,71 @@
+{% extends 'base.html' %}
+
+{% block title %}Contact {% endblock %}
+
+{% block content %}
+<div class="row justify-content-center mt-5">
+  <div class="col-md-8 text-center">
+    <h2 class="mb-4 fw-bold" style="color:#1d3557;">Connect with Me</h2>
+    <p class="lead text-muted mb-5">Let’s get in touch! Follow me or reach out through my social media accounts:</p>
+    
+    <div class="row g-4 justify-content-center">
+      <!-- Instagram -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.instagram.com/the_tech_girl_" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm border-0 h-100 text-center py-4 hover-scale">
+            <i class="fab fa-instagram fa-3x mb-2 text-gradient" style="background:linear-gradient(45deg,#f58529,#dd2a7b,#8134af); -webkit-background-clip:text; color:transparent;"></i>
+            <p class="mb-0 text-dark fw-semibold">Instagram</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Twitter -->
+      <div class="col-6 col-md-3">
+        <a href="https://twitter.com/_the_tech_girl_" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm border-0 h-100 text-center py-4 hover-scale">
+            <i class="fab fa-twitter fa-3x mb-2 text-info"></i>
+            <p class="mb-0 text-dark fw-semibold">Twitter</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- LinkedIn -->
+      <div class="col-6 col-md-3">
+        <a href="https://www.linkedin.com/in/divina-mbel-aaa601219" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm border-0 h-100 text-center py-4 hover-scale">
+            <i class="fab fa-linkedin fa-3x mb-2 text-primary"></i>
+            <p class="mb-0 text-dark fw-semibold">LinkedIn</p>
+          </div>
+        </a>
+      </div>
+
+      <!-- Facebook -->
+      <div class="col-6 col-md-3">
+        <a href="https://web.facebook.com/profile.php?id=100090197567051" target="_blank" class="text-decoration-none">
+          <div class="card shadow-sm border-0 h-100 text-center py-4 hover-scale">
+            <i class="fab fa-facebook fa-3x mb-2 text-primary"></i>
+            <p class="mb-0 text-dark fw-semibold">Facebook</p>
+          </div>
+        </a>
+      </div>
+    </div>
+
+    <p class="mt-5 text-muted">Or <a href="{% url 'contact' %}" class="text-primary fw-bold">send me a message</a> directly through the contact form.</p>
+  </div>
+</div>
+
+<style>
+  .hover-scale {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+  }
+  .hover-scale:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+  }
+  .text-gradient {
+    background-clip: text;
+    -webkit-background-clip: text;
+    color: transparent;
+  }
+</style>
+{% endblock %}

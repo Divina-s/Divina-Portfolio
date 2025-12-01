@@ -1,0 +1,24 @@
+/* style.css - small polish on top of Bootstrap */
+body { font-family: "Inter", system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial; }
+.text-primary { color: #0d6efd !important; } /* bootstrap primary is fine */
+a { text-decoration: none; }
+.card img { object-fit: cover; width: 100%; height: auto; }
+
+/* smaller screens tweak */
+@media (max-width: 576px) {
+  .display-5 { font-size: 1.8rem; }
+}
+
+
+.progress {
+  height: 25px;
+  border-radius: 15px;
+  background-color: #e9ecef;
+}
+
+.progress-bar {
+  font-weight: bold;
+  text-align: right;
+  padding-right: 5px;
+  transition: width 1.5s ease-in-out;
+}

@@ -1,0 +1,123 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block title %}About — Divina Mbel{% endblock %}
+
+{% block content %}
+<div class="container py-5">
+
+  <!-- Hero Section -->
+<div class="row align-items-center mb-5">
+  <div class="col-md-4 text-center">
+    <img src="{% static 'images/profile.jpg' %}" 
+         class="rounded-circle shadow-sm"
+         style="width:200px; height:200px; object-fit:cover;" 
+         alt="Divina Mbel">
+  </div>
+  <div class="col-md-8">
+    <h1 class="fw-bold text-primary">Hi, I'm Divina Mbel</h1>
+    <p class="lead text-secondary">Data Scientist & AI Enthusiast | Empowering communities through data and mentorship</p>
+    <a href="{% static 'files/Divina_Mbel_CV.pdf' %}" class="btn btn-primary btn-lg mt-3" download>
+      <i class="fas fa-download me-2"></i>Download CV
+    </a>
+  </div>
+</div>
+
+  <!-- About Text -->
+  <div class="row g-5 mb-5">
+    <div class="col-lg-8">
+      <h2 class="fw-bold text-primary mb-4">About Me</h2>
+      <p class="text-secondary">
+        I’m a passionate data scientist, problem solver, and mentor. I transform raw data into actionable insights and design AI solutions that address real-world challenges. I love teaching, mentoring, and inspiring the next generation of tech enthusiasts.
+      </p>
+      <p class="text-secondary">
+        As a GDG Co-organizer and Women Techmakers Ambassador & Lead, I’ve led workshops and outreach programs, empowering hundreds of students, especially girls, to explore programming, machine learning, and AI with confidence.
+      </p>
+      <p class="text-secondary">
+        Beyond mentoring, I create AI-powered projects from plant disease detection apps to interactive dashboards that make data science accessible and impactful.
+      </p>
+    </div>
+
+    <!-- Sidebar -->
+    <div class="col-lg-4">
+      <div class="card shadow-sm mb-4 border-0">
+        <div class="card-body text-center">
+          <h6 class="text-primary fw-bold mb-3">Contact</h6>
+          <p class="text-secondary mb-1"><i class="fas fa-envelope me-2"></i><a href="mailto:divinamanye@gmail.com">divinamanye@gmail.com</a></p>
+          <p class="text-secondary mb-1"><i class="fab fa-github me-2"></i><a href="https://github.com/Divina-s" target="_blank">Divina-s</a></p>
+          <p class="text-secondary mb-1"><i class="fab fa-linkedin me-2"></i><a href="https://www.linkedin.com/in/divina-mbel-aaa601219" target="_blank">Divina Mbel</a></p>
+          <p class="text-secondary mb-0"><i class="fas fa-map-marker-alt me-2"></i>Bamenda, Cameroon</p>
+        </div>
+      </div>
+      <div class="card shadow-sm border-0">
+        <div class="card-body">
+          <h6 class="text-primary fw-bold mb-3">Quick Facts</h6>
+          <ul class="list-unstyled text-secondary mb-0">
+            <li><i class="fas fa-check-circle me-2 text-primary"></i>Python, Django, TensorFlow, SQL, NLP</li>
+            <li><i class="fas fa-check-circle me-2 text-primary"></i>Organizer of workshops and hackathons</li>
+            <li><i class="fas fa-check-circle me-2 text-primary"></i>Passionate about AI for social good</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Highlights Section -->
+  <div class="row g-4 mb-5">
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-3"><i class="fas fa-bullseye me-2"></i>Core Values</h5>
+        <ul class="text-secondary mb-0">
+          <li>Applying AI for social impact</li>
+          <li>Mentoring young people in tech</li>
+          <li>Designing practical, interpretable solutions</li>
+          <li>Building collaborative learning communities</li>
+        </ul>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm h-100">
+        <h5 class="text-primary fw-bold mb-3"><i class="fas fa-users me-2"></i>Leadership & Community</h5>
+        <ul class="text-secondary mb-0">
+          <li>GDG Co-Organizer: Google Developer Group Bambili</li>
+          <li>WTM Ambassador & Lead: WTM Bambili</li>
+          <li>Mentor & Instructor for AI outreach programs (400+ students)</li>
+          <li>Organizer of workshops, hackathons, and training sessions</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+
+  <!-- Education Section -->
+  <h2 class="fw-bold text-primary mb-4">Education</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm">
+        <h6 class="fw-bold text-secondary mb-2">M.Tech, Data Science</h6>
+        <p class="text-secondary mb-0">University of Bamenda, Cameroon — GPA: 3.47/4</p>
+      </div>
+    </div>
+    <div class="col-md-6">
+      <div class="p-4 bg-light rounded shadow-sm">
+        <h6 class="fw-bold text-secondary mb-2">B.Tech, Computer Engineering</h6>
+        <p class="text-secondary mb-0">University of Bamenda, Cameroon — GPA: 3.14/4</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+body {
+  font-family: 'Nunito', sans-serif;
+}
+.text-primary { color: #1d3557 !important; }
+.text-secondary { color: #495057 !important; }
+.lead { font-size: 1.1rem; }
+.card, .bg-light {
+  transition: all 0.3s ease;
+}
+.card:hover, .bg-light:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 12px 25px rgba(0,0,0,0.15);
+}
+</style>
+{% endblock %}

@@ -1,0 +1,100 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Divina Mbel{% endblock %}
+
+{% block content %}
+<div class="row align-items-center py-5">
+  <!-- Left side -->
+  <div class="col-lg-7">
+    <h1 class="display-5 fw-bold mb-3">Hi, I'm <span class="text-primary">Divina Mbel</span></h1>
+    <p class="lead text-muted mb-4">
+      I turn data into stories, insights, and solutions. From detecting plant diseases with AI, 
+      to building interactive dashboards for blood donation, I create tools that make a real impact. 
+      I also lead AI workshops to inspire young learners, especially girls, to explore the world of tech.
+    </p>
+
+    <div class="d-flex flex-wrap gap-3 mb-4">
+      <a href="{% url 'about' %}" class="btn btn-primary btn-lg shadow-sm">Get to Know Me</a>
+      <a href="{% url 'projects' %}" class="btn btn-outline-primary btn-lg shadow-sm">See My Work</a>
+    </div>
+
+    <!-- Impact / Innovation cards -->
+    <div class="row g-3">
+      <div class="col-md-6">
+        <div class="card shadow-sm hover-card">
+          <div class="card-body">
+            <h6 class="card-title mb-1">Impact</h6>
+            <p class="card-text small text-muted">
+              Leading AI workshops and mentorship programs that reached 400+ students.
+            </p>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card shadow-sm hover-card">
+          <div class="card-body">
+            <h6 class="card-title mb-1">Innovation</h6>
+            <p class="card-text small text-muted">
+              Creating AI solutions, ML models, and dashboards that solve real problems.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Right side: profile -->
+  <div class="col-lg-5 text-center mt-4 mt-lg-0">
+    <div class="card border-0 shadow-lg" style="max-width:300px;margin:0 auto;">
+      <img src="{% static 'images/profile.jpg' %}" alt="Divina profile" class="card-img-top rounded-circle p-3" />
+      <div class="card-body">
+        <h5 class="card-title mb-0">Divina Mbel</h5>
+        <small class="text-muted">Data Scientist | GDG Co-Organizer | WTM Ambassador & Lead</small>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Quick Skills & CTA -->
+<section class="mt-5 py-4 bg-light rounded-3">
+  <div class="container">
+    <div class="row align-items-center">
+      <div class="col-md-8">
+        <h4 class="mb-3">Some of My Skills</h4>
+        <div class="d-flex flex-wrap gap-2">
+          <span class="badge bg-gradient-primary py-2 px-3">Python</span>
+          <span class="badge bg-gradient-success py-2 px-3">Machine Learning</span>
+          <span class="badge bg-gradient-info py-2 px-3">NLP</span>
+          <span class="badge bg-gradient-warning py-2 px-3">Explainable AI</span>
+          <span class="badge bg-gradient-danger py-2 px-3">Streamlit</span>
+          <span class="badge bg-gradient-secondary py-2 px-3">Django</span>
+        </div>
+      </div>
+      <div class="col-md-4 text-md-end mt-3 mt-md-0">
+        <a href="{% url 'contact' %}" class="btn btn-success btn-lg shadow-sm">Let’s Connect</a>
+      </div>
+    </div>
+  </div>
+</section>
+{% endblock %}
+
+{% block extra_css %}
+<style>
+  .hover-card {
+    transition: all 0.3s ease;
+  }
+  .hover-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.75rem 1.5rem rgba(0,0,0,0.15) !important;
+  }
+
+  /* Gradient badges */
+  .bg-gradient-primary { background: linear-gradient(45deg,#0d6efd,#6610f2); color:white; }
+  .bg-gradient-success { background: linear-gradient(45deg,#198754,#20c997); color:white; }
+  .bg-gradient-info { background: linear-gradient(45deg,#0dcaf0,#0dcaf0); color:white; }
+  .bg-gradient-warning { background: linear-gradient(45deg,#ffc107,#fd7e14); color:white; }
+  .bg-gradient-danger { background: linear-gradient(45deg,#dc3545,#fd3567); color:white; }
+  .bg-gradient-secondary { background: linear-gradient(45deg,#6c757d,#adb5bd); color:white; }
+</style>
+{% endblock %}

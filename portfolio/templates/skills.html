@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Skills {% endblock %}
+
+{% block content %}
+<div class="container py-5">
+  <h2 class="mb-4 text-center fw-bold" style="color:#1d3557;">My Skills</h2>
+  <p class="text-center text-muted mb-5">Here’s a snapshot of my core skills in Data Science, Machine Learning, and AI:</p>
+
+  <div class="row g-4">
+    <!-- Programming & ML -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Programming & Machine Learning</h5>
+
+          <h6>Python <span class="float-end">95%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-primary" role="progressbar" style="width:0%" data-progress="95">95%</div>
+          </div>
+
+          <h6>Pandas & NumPy <span class="float-end">90%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width:0%" data-progress="90">90%</div>
+          </div>
+
+          <h6>Scikit-Learn <span class="float-end">85%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-info" role="progressbar" style="width:0%" data-progress="85">85%</div>
+          </div>
+
+          <h6>TensorFlow & Keras <span class="float-end">80%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-warning" role="progressbar" style="width:0%" data-progress="80">80%</div>
+          </div>
+
+          <h6>Explainable AI (XAI) <span class="float-end">75%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-secondary" role="progressbar" style="width:0%" data-progress="75">75%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Web & Data Tools -->
+    <div class="col-md-6">
+      <div class="card shadow-sm h-100">
+        <div class="card-body">
+          <h5 class="card-title mb-3">Web & Data Tools</h5>
+
+          <h6>Streamlit & Dashboarding <span class="float-end">85%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-dark" role="progressbar" style="width:0%" data-progress="85">85%</div>
+          </div>
+
+          <h6>Django & Web Apps <span class="float-end">70%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-danger" role="progressbar" style="width:0%" data-progress="70">70%</div>
+          </div>
+
+          <h6>SQL & PostgreSQL <span class="float-end">80%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-info" role="progressbar" style="width:0%" data-progress="80">80%</div>
+          </div>
+
+          <h6>Data Visualization (Matplotlib, Seaborn, Plotly) <span class="float-end">85%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-success" role="progressbar" style="width:0%" data-progress="85">85%</div>
+          </div>
+
+          <h6>Git / GitHub <span class="float-end">80%</span></h6>
+          <div class="progress mb-3">
+            <div class="progress-bar bg-primary" role="progressbar" style="width:0%" data-progress="80">80%</div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Download CV -->
+  <div class="text-center mt-5">
+    <a href="{% static 'files/Divina_Mbel_CV.pdf' %}" class="btn btn-primary btn-lg">
+      <i class="fas fa-download me-2"></i> Download CV
+    </a>
+  </div>
+</div>
+{% endblock %}
+
+{% block extra_js %}
+<script>
+  // Animate skill bars
+  document.addEventListener('DOMContentLoaded', () => {
+    const bars = document.querySelectorAll('.progress-bar');
+    bars.forEach(bar => {
+      const progress = bar.getAttribute('data-progress');
+      setTimeout(() => { bar.style.width = progress + '%'; }, 200);
+    });
+  });
+</script>
+{% endblock %}

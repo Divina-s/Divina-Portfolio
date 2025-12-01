@@ -1,0 +1,68 @@
+[
+  {
+    "model": "portfolio.experience",
+    "pk": 1,
+    "fields": {
+      "title": "Data Science Supervisor",
+      "role": "Traitz Tech",
+      "location": "Bambili, Cameroon",
+      "date": "2024-02-01",
+      "description": "Supervised a team of interns on machine learning and analytics projects, improving model accuracy and data quality. Designed internship programs aligned with company goals, increasing project delivery efficiency by 20%. Guided data teams through the full ML pipeline (data prep → analysis → model deployment). Expanded mentoring by introducing hands-on workshops for new hires, boosting onboarding speed."
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 2,
+    "fields": {
+      "title": "Tech Course Content Creator",
+      "role": "MetaBrains – Remote",
+      "location": "Lebanon",
+      "date": "2024-05-01",
+      "description": "Developed and published structured course materials on Generative AI, Data Science, and Machine Learning, reaching 500+ learners. Integrated cutting-edge AI trends to ensure course relevance and learner career readiness. Collaborated with educators to align training content with job-market needs, producing practical assignments and interactive exercises."
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 3,
+    "fields": {
+      "title": "Data Science Mentor",
+      "role": "Growing Girls In Tech",
+      "location": "Bamenda, Cameroon",
+      "date": "2024-03-01",
+      "description": "Mentored 30+ students in Python, ML fundamentals, and applied analytics. Created tailored learning paths, boosting participant retention and confidence in technical skills. Developed sample projects and guided students to implement real-world datasets, reinforcing applied learning."
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 4,
+    "fields": {
+      "title": "Organizer/Mentor",
+      "role": "Google Developers Group Bambili",
+      "location": "Bambili, Cameroon",
+      "date": "2024-06-01",
+      "description": "Facilitated community workshops on Python, ML, and AI concepts with 250+ participants. Led projects applying data science to real-world challenges (education, local business). Organized interactive coding sessions and competitions to engage attendees and showcase practical skills."
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 5,
+    "fields": {
+      "title": "Lead",
+      "role": "WomenTechMakers",
+      "location": "Bambili, Cameroon",
+      "date": "2024-01-01",
+      "description": "Organized tech workshops and events that introduced 200+ women to careers in AI and Data Science. Built an online knowledge-sharing community, growing engagement by 40%. Provided mentorship and guidance for attendees to start their first projects in Python and ML."
+    }
+  },
+  {
+    "model": "portfolio.experience",
+    "pk": 6,
+    "fields": {
+      "title": "Assistant Program Manager",
+      "role": "Her Blueprint Africa",
+      "location": "Bamenda, Cameroon",
+      "date": "2024-02-01",
+      "description": "Coordinated leadership and digital literacy programs that reached 200+ young women. Launched digital literacy workshops, equipping participants with core tech and online safety skills. Introduced mini-projects and exercises to reinforce learning outcomes and practical skills."
+    }
+  }
+]
