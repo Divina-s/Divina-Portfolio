@@ -87,15 +87,23 @@ WSGI_APPLICATION = 'portfolio_project.wsgi.application'
     #}
 #}
 
+#DATABASES = {
+    #'default': {
+    #    'ENGINE': 'django.db.backends.postgresql',
+    #    'NAME': 'portfolio_db',
+    #    'USER': 'divina',
+    #    'PASSWORD': '000000',  # or your chosen password
+     #  'HOST': 'localhost',
+      #  'PORT': '5432',
+    #}
+#}
+
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.postgresql',
-        'NAME': 'portfolio_db',
-        'USER': 'divina',
-        'PASSWORD': '000000',  # or your chosen password
-        'HOST': 'localhost',
-        'PORT': '5432',
-    }
+    'default': dj_database_url.parse(
+        "postgresql://neondb_owner:npg_ADX58JnWgMou@ep-mute-lab-adixkk1r-pooler.c-2.us-east-1.aws.neon.tech/neondb?sslmode=require&channel_binding=require",
+        conn_max_age=600,
+        ssl_require=True
+    )
 }
 
 
