@@ -28,6 +28,7 @@ ALLOWED_HOSTS = [
     'localhost',
     'divinambel.com',
     'www.divinambel.com',
+    'https://divina-portfolio.onrender.com',
 ]
 
 # Application definition
