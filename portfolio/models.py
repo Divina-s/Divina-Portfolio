@@ -14,8 +14,9 @@ class Project(models.Model):
     @property
     def image_url(self):
         from django.templatetags.static import static
-        return static(f'images/{self.image_name}')
-
+        if self.image_name:
+            return static(f'images/{self.image_name}')  # points to static/images/
+        return static('images/default_project.jpg')  # fallback image
 
 class Experience(models.Model):
     title = models.CharField(max_length=200)
