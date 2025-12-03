@@ -5,7 +5,7 @@ class Project(models.Model):
     description = models.TextField()
     github_url = models.URLField(blank=True, null=True)
     live_url = models.URLField(blank=True, null=True)
-    image_name = models.CharField(max_length=255, blank=True, null=True)  # store filename
+    image_name = models.CharField(max_length=255, blank=True, null=True)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -14,7 +14,8 @@ class Project(models.Model):
     @property
     def image_url(self):
         from django.templatetags.static import static
-        return static(f'images/{self.image_name}')  # points to static/images/
+        return static(f'images/{self.image_name}')
+
 
 class Experience(models.Model):
     title = models.CharField(max_length=200)
