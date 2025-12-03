@@ -25,3 +25,6 @@ class Experience(models.Model):
     date = models.DateField()
     location = models.CharField(max_length=200, blank=True)
     icon = models.ImageField(upload_to='experience_icons/', blank=True, null=True)  # optional small icon
+
+
+#yeah
